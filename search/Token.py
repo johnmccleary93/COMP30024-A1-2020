@@ -1,5 +1,5 @@
 class Token:
-    def __init__(self, color, coords):
+    def __init__(self, color, coords, size=1):
         self.color = color
         self.coords = coords
-        self.size = 1 #Can we assume that on initialization, will never include a stack
+        self.size = size #Can we assume that on initialization, will never include a stack
