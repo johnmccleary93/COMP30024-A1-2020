@@ -90,34 +90,6 @@ class Game:
             score = score + len(self.find_all_moves().values()) - len(self.find_all_moves('black').values())
         return score
 
-    # def find_best_move(self, moves, depth=5, best_move=()):
-    #     if depth == 1:
-    #         return best_move
-    #     else:
-    #         for token in moves.keys():
-    #             for action in moves[token]:
-    #                 if best_move == ():
-    #                     best_move = (token, action, self.board_score())
-    #                 new_board = Game(copy.deepcopy(self.tokens)) 
-    #                 if token.coords == action:
-    #                     new_board.boom(new_board.return_token(token.coords))
-    #                     if new_board.board_score() >= best_move[2]:
-    #                         if depth == 5:
-    #                             best_move = (token, action, new_board.board_score())
-    #                         else: 
-    #                             best_move = (best_move[0], best_move[1], new_board.board_score())
-    #                     best_move = new_board.find_best_move(new_board.find_all_moves(), depth-1, best_move)
-    #                 else:
-    #                     new_board.move_token(new_board.return_token(token.coords), action, 1)
-    #                     if new_board.board_score() >= best_move[2]:
-    #                         if depth == 5:
-    #                             best_move = (token, action, new_board.board_score())
-    #                         else: 
-    #                             best_move = (best_move[0], best_move[1], new_board.board_score())
-    #                     best_move = new_board.find_best_move(new_board.find_all_moves(), depth-1, best_move)
-    #     return best_move
-
-
     def min_max(self, moves, depth=8, num_steps=0):
         best_value = self.board_score(num_steps)
         best_move = ()
@@ -132,10 +104,7 @@ class Game:
                     if new_value > best_value:
                         best_value = new_value
                         best_move = (token, action)
-                #print(best_value, best_move)
                 return (best_value, best_move)
-
-                    
 
     def apply_action(self, token, action):
         if token.coords == action:
