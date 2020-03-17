@@ -81,8 +81,7 @@ class Game:
     
 
     #Assumes player is white
-    def board_score(self, num_steps):
-        #score = -(num_steps)
+    def board_score(self):
         score = 0
         for token in self.tokens:
             if token.color == 'black':
@@ -90,8 +89,8 @@ class Game:
             score = score + len(self.find_all_moves().values()) - len(self.find_all_moves('black').values())
         return score
 
-    def min_max(self, moves, depth=8, num_steps=0):
-        best_value = self.board_score(num_steps)
+    def min_max(self, moves, depth=8):
+        best_value = self.board_score()
         best_move = ()
         if depth == 0 or moves == {}:
             return (best_value, best_move)
@@ -100,11 +99,13 @@ class Game:
                 for action in moves[token]:
                     new_board = Game(copy.deepcopy(self.tokens))
                     new_board.apply_action(new_board.return_token(token.coords), action)
-                    new_value = max(best_value, new_board.min_max(new_board.find_all_moves(), depth-1, num_steps+1)[0])
+                    new_value = max(best_value, new_board.min_max(new_board.find_all_moves(), depth-1)[0])
                     if new_value > best_value:
                         best_value = new_value
                         best_move = (token, action)
                 return (best_value, best_move)
+
+                    
 
     def apply_action(self, token, action):
         if token.coords == action:
