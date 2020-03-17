@@ -15,19 +15,18 @@ def parse_file(file):
     return tokens
 
 def main():
-    return x
-    # TODO: find and print winning action sequence
-    
-if __name__ == '__main__':
-    #main()
     tokens = parse_file(sys.argv[1])
     game = Game(tokens)
     i = 0
     while i < 5:
-        game.print_tokens()
+        #game.print_tokens()
         move = game.min_max(game.find_all_moves())
-        print(move)
         if move[1] != ():
+            print_move(1, move[1][0].coords[0], move[1][0].coords[1], move[1][1][0], move[1][1][1])
             game.apply_action(move[1][0], move[1][1])
         i += 1
+    # TODO: find and print winning action sequence
+    
+if __name__ == '__main__':
+    main()
     
