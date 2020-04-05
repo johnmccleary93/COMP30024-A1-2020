@@ -98,7 +98,7 @@ class Game:
             score = score + len(self.find_all_moves().values()) - len(self.find_all_moves('black').values())
         return score
 
-    def min_max(self, moves, depth=5):
+    def min_max(self, moves, depth=4):
         best_value = self.board_score()
         best_move = ()
         best_moves = self.moves_taken
