@@ -13,8 +13,9 @@ class Game:
     best_coord_dict = {}
     list_tokens = []
 
-    def __init__(self, tokens):
+    def __init__(self, tokens, moves_taken=[]):
         self.tokens = tokens
+        self.moves_taken = moves_taken
     
     def return_token(self, coords):
         for token in self.tokens:
@@ -141,55 +142,40 @@ class Game:
             token.coords = new_coords_size[0]
         pass
 
-    def move_to_coord(self, token, best_coord):
+
+    def move_to_coord(self, token, best_moves):
         self.print_tokens()
-        new_coords = []
-        new_coords.append(token.coords[0])
-        new_coords.append(token.coords[1])
-        print(f"The token is at {new_coords}")
-        print(f"The token should go to {best_coord}")
 
-        while new_coords[0] < best_coord[0]:
-            new_coords[0] += 1
-            print_move(token.size,new_coords[0] - 1,new_coords[1],new_coords[0],new_coords[1])
-            self.move_token2(token,(tuple(new_coords),1))
+        print(f"The token is at {token.coords}")
+        print(f"The token should go to {best_moves[-1]}")
+        last_move = best_moves[-1]
+
+        for move in best_moves:
+
+            print_move(move[1],token.coords[0],token.coords[1],move[0][0],move[0][1])
+            self.move_token2(token,move)
+            print(move)
             self.print_tokens()
 
-        while new_coords[0] > best_coord[0]:
-            new_coords[0] -= 1
-            print_move(token.size,new_coords[0] + 1,new_coords[1],new_coords[0],new_coords[1])
-            self.move_token2(token,(tuple(new_coords),1))
-            self.print_tokens()
+        self.boom(token)
+        print_boom(token.coords[0],token.coords[1])
+        self.print_tokens()
 
-        while new_coords[1] < best_coord[1]:
-            new_coords[1] += 1
-            print_move(token.size,new_coords[0],new_coords[1]-1,new_coords[0],new_coords[1])
-            self.move_token2(token,(tuple(new_coords),1))
-            self.print_tokens()
-
-        while new_coords[1] > best_coord[1]:
-            new_coords[1] -= 1
-            print_move(token.size,new_coords[0],new_coords[1]+1,new_coords[0],new_coords[1])
-            self.move_token2(token,(tuple(new_coords),1))
-            self.print_tokens()
-
-        if (new_coords[0] == best_coord[0]) and (new_coords[1] == best_coord[1]):
-            self.boom(token)
-            print_boom(token.coords[0],token.coords[1])
-            self.print_tokens()
-            pass
+        pass
 
 
-    def best_score_for_token(self,token,actions, depth=32):
+    def best_score_for_token(self,token,actions, depth=100):
 
-        best_value = -1000
+        best_value = self.board_score()
         best_move = ()
+        best_moves = self.moves_taken
+        flag = 0
 
         if depth == 0:
-            return (best_value,best_move)
+            return (best_value,best_move,best_moves)
 
         for action in actions:
-            new_board = Game(copy.deepcopy(self.tokens))
+            new_board = Game(copy.deepcopy(self.tokens), self.moves_taken + [action])
             token1 = new_board.return_token(token.coords)
             if token1 != None:
                 new_board.apply_action(token1, action)
@@ -199,14 +185,29 @@ class Game:
                 if not (token1_tuple in Game.list_tokens):   
                     Game.list_tokens.append(token1_tuple)
                     best_value_move = new_board.best_score_for_token(token1,new_board.find_moves(token1),depth-1)
-                    max_value = max(new_board.board_score(),best_value_move[0])
+                    max_value = best_value_move[0]
+                    flag = 1
                 else:
                     max_value = new_board.board_score()
+
             #if boom
             if token1 == None:
                 max_value = new_board.board_score()
 
-            if max_value > best_value:
+            if flag == 1 and ((max_value > best_value) or (max_value == best_value and len(best_value_move[2]) < len(best_moves))):
+                best_value = max_value
+                best_move = action
+                best_moves = best_value_move[2]
+                #print(best_moves)
+                if max_value == best_value and len(best_value_move[2]) < len(best_moves):
+                    if Game.best_best_value < max_value:
+                            Game.best_best_value = max_value
+                            print(Game.best_best_value)
+                            Game.best_best_coord = list(token.coords)
+                            print(Game.best_best_coord)
+                flag = 0
+
+            elif max_value > best_value:
                 #print(f"{max_value} if men ruh honeek {action}")
                 best_value = max_value
                 best_move = action
@@ -216,7 +217,7 @@ class Game:
                             Game.best_best_coord = list(token.coords)
                             print(Game.best_best_coord)
 
-        return (best_value, best_move)
+        return (best_value, best_move, best_moves)
 
 
     def min_max(self, moves): #moves hon hiye dictionary find all moves
@@ -225,8 +226,9 @@ class Game:
         while moves:
             for token in moves.keys():
                 print(token.coords)
-                self.best_score_for_token(token,moves[token])
-                Game.best_coord_dict[token] = (Game.best_best_coord,Game.best_best_value)
+                list_moves = self.best_score_for_token(token,moves[token])
+                #print(list_moves[2])
+                Game.best_coord_dict[token] = (Game.best_best_coord,Game.best_best_value,list_moves[2])
                 Game.best_best_coord = []
                 Game.best_best_value = - 1000
                 Game.list_tokens = []
@@ -238,11 +240,12 @@ class Game:
                 if Game.best_coord_dict[token][1] > max1:
                     max1 = Game.best_coord_dict[token][1]
                     max_token = token
-                    max_coord = Game.best_coord_dict[token][0]
+                    best_moves = Game.best_coord_dict[token][2]
 
-            self.move_to_coord(max_token,max_coord)
+            self.move_to_coord(max_token,best_moves)
             Game.best_coord_dict = {}
-            del moves[max_token]
+            #del moves[max_token]
+            moves = self.find_all_moves()
             print(moves.keys())
 
         pass
