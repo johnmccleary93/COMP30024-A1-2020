@@ -9,18 +9,19 @@ def parse_file(file):
         data = json.load(file)
         tokens = []
         for token in data['white']:
-            tokens = tokens + [Token("white", (token[1], token[2]))]
+            tokens = tokens + [Token("white", (token[1], token[2]), token[0])]
         for token in data['black']:
-            tokens = tokens + [Token("black", (token[1], token[2]))]
+            tokens = tokens + [Token("black", (token[1], token[2]), token[0])]
     return tokens
 
 def main():
     tokens = parse_file(sys.argv[1])
     game = Game(tokens)
     i = 0
-    while i < 5:
-        #game.print_tokens()
+    while i < 10:
+        game.print_tokens()
         move = game.min_max(game.find_all_moves())
+        print(move[2])
         if move[1] != ():
             print_move(1, move[1][0].coords[0], move[1][0].coords[1], move[1][1][0], move[1][1][1])
             game.apply_action(move[1][0], move[1][1])

@@ -7,8 +7,9 @@ import copy
 
 class Game:
 
-    def __init__(self, tokens):
+    def __init__(self, tokens, moves_taken=[]):
         self.tokens = tokens
+        self.moves_taken = moves_taken
     
     def return_token(self, coords):
         for token in self.tokens:
@@ -41,7 +42,15 @@ class Game:
             count += 1
         moves = list(set(moves))
         moves = [move for move in moves if self.return_token(move) is None or self.return_token(move).color == token.color]
-        return moves
+        moves2 = []
+        count = 1
+        for move in moves:
+            while count <= token.size:
+                moves2 = moves2 + [(move,count)]
+                count += 1
+            count = 1
+        moves2 = list(set(moves2))
+        return moves2
     
     def move_token(self, token, new_coords, size):
         if self.return_token(new_coords) is not None:
@@ -89,27 +98,27 @@ class Game:
             score = score + len(self.find_all_moves().values()) - len(self.find_all_moves('black').values())
         return score
 
-    def min_max(self, moves, depth=8):
+    def min_max(self, moves, depth=5):
         best_value = self.board_score()
         best_move = ()
+        best_moves = self.moves_taken
         if depth == 0 or moves == {}:
-            return (best_value, best_move)
+            return (best_value, best_move, best_moves)
         else:
             for token in moves.keys():
                 for action in moves[token]:
-                    new_board = Game(copy.deepcopy(self.tokens))
+                    new_board = Game(copy.deepcopy(self.tokens), self.moves_taken + [action])
                     new_board.apply_action(new_board.return_token(token.coords), action)
-                    new_value = max(best_value, new_board.min_max(new_board.find_all_moves(), depth-1)[0])
-                    if new_value > best_value:
-                        best_value = new_value
-                        best_move = (token, action)
-                return (best_value, best_move)
-
-                    
+                    new_value = new_board.min_max(new_board.find_all_moves(), depth-1)
+                    if new_value[0] > best_value or (new_value[0] == best_value and len(new_value[2]) < len(best_moves)):
+                        best_value = new_value[0]
+                        best_moves = new_value[2]
+                        best_move = (token, best_moves[0])
+            return (best_value, best_move, best_moves)               
 
     def apply_action(self, token, action):
-        if token.coords == action:
+        if token.coords == action[0]:
             self.boom(token) 
         else:
-            self.move_token(token, action, 1)   
+            self.move_token(token, action[0], action[1])   
 
