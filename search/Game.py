@@ -10,6 +10,8 @@ class Game:
     def __init__(self, tokens, moves_taken=[]):
         self.tokens = tokens
         self.moves_taken = moves_taken
+
+        
     
     def return_token(self, coords):
         for token in self.tokens:
@@ -98,22 +100,27 @@ class Game:
             score = score + len(self.find_all_moves().values()) - len(self.find_all_moves('black').values())
         return score
 
-    def min_max(self, moves, depth=4):
+    def min_max(self, moves, depth=8):
         best_value = self.board_score()
         best_move = ()
         best_moves = self.moves_taken
-        if depth == 0 or moves == {}:
+        if depth == 0 or moves == {} or best_value >= 0:
             return (best_value, best_move, best_moves)
         else:
             for token in moves.keys():
                 for action in moves[token]:
-                    new_board = Game(copy.deepcopy(self.tokens), self.moves_taken + [action])
+                    new_board = Game(copy.deepcopy(self.tokens), self.moves_taken + [(token,action)])
                     new_board.apply_action(new_board.return_token(token.coords), action)
                     new_value = new_board.min_max(new_board.find_all_moves(), depth-1)
-                    if new_value[0] > best_value or (new_value[0] == best_value and len(new_value[2]) < len(best_moves)):
+                    if new_value[0] >= 0:
                         best_value = new_value[0]
                         best_moves = new_value[2]
-                        best_move = (token, best_moves[0])
+                        best_move = (token, action)
+                        return (best_value, best_move, best_moves)
+                    elif new_value[0] > best_value or (new_value[0] == best_value and len(new_value[2]) < len(best_moves)):
+                        best_value = new_value[0]
+                        best_moves = new_value[2]
+                        best_move = (token, action)
             return (best_value, best_move, best_moves)               
 
     def apply_action(self, token, action):
