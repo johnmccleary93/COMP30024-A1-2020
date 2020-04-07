@@ -36,13 +36,11 @@ def main():
      game = Game(tokens)
      move = game.min_max(game.find_all_moves())
      for each_move in move[2]:
-        #print(each_move)
         if each_move[0].coords == each_move[1][0]:
              print_boom(each_move[0].coords[0], each_move[0].coords[1])
         else:
             print_move(each_move[0].size, each_move[0].coords[0], each_move[0].coords[1], each_move[1][0][0], each_move[1][0][1])
         game.apply_action(game.return_token(each_move[0].coords), each_move[1])
-        #game.print_tokens()
     
 if __name__ == '__main__':
     main()

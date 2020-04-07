@@ -10,6 +10,7 @@ class Game:
     def __init__(self, tokens, moves_taken=[]):
         self.tokens = tokens
         self.moves_taken = moves_taken
+        self.current_score = self.board_score()
 
         
     
@@ -31,6 +32,10 @@ class Game:
                 y += 1
             y = -1
             x += 1
+        if token.color == 'white':
+            return 1
+        else:
+            return 0
 
     #Assumes board size is 7. Find all moves for a given token.
     def find_moves(self, token):
@@ -109,6 +114,9 @@ class Game:
         else:
             for token in moves.keys():
                 for action in moves[token]:
+                    if token.coords == action:
+                        if self.boom(token) > 1 and depth > 1: #We don't try any moves that explode multiple white tokens until we're at max depth.
+                            return(best_value, best_move, best_moves)
                     new_board = Game(copy.deepcopy(self.tokens), self.moves_taken + [(token,action)])
                     new_board.apply_action(new_board.return_token(token.coords), action)
                     new_value = new_board.min_max(new_board.find_all_moves(), depth-1)
