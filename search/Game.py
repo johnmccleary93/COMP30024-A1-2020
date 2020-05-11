@@ -10,7 +10,6 @@ class Game:
     def __init__(self, tokens, moves_taken=[]):
         self.tokens = tokens
         self.moves_taken = moves_taken
-        self.current_score = self.board_score()
 
         
     
