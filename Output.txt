@@ -1,0 +1,1611 @@
+PS C:\Users\samer\Desktop\python\partB> python -m referee elons_MUSKeteers elons_MUSKeteers                                                                                                                                                                                    ******************************************************************
+welcome to Expendibots referee version 1.1.
+
+conducts a game of Expendibots between 2 Player classes.
+
+run `python -m referee --help` for additional usage information.
+******************************************************************
+* all messages printed by the referee after this begin with a *
+* (any other lines of output must be from your Player classes).
+* importing player 1's player class 'Player' from package 'elons_MUSKeteers'
+* importing player 2's player class 'Player' from package 'elons_MUSKeteers'
+* NOTE: unable to measure memory usage on this platform (try dimefox)
+** initialising players
+* initialising white player as a 'elons_MUSKeteers.player.ExamplePlayer'
+*   time:  + 0.016s  (just elapsed)    0.016s  (game total)
+* initialising black player as a 'elons_MUSKeteers.player.ExamplePlayer'
+*   time:  + 0.000s  (just elapsed)    0.000s  (game total)
+** game start!
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|[1]|   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|(1)|   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (0, 1), (0, 2))
+*   time:  +41.719s  (just elapsed)   41.734s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|[1]|   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |   |(1)|   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (0, 1), (0, 2))...
+*   time:  + 0.000s  (just elapsed)   41.734s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (0, 1), (0, 2))...
+*   time:  + 0.000s  (just elapsed)    0.000s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (0, 6), (0, 5))
+*   time:  +48.797s  (just elapsed)   48.797s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |[1]|   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |   |(1)|   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (0, 6), (0, 5))...
+*   time:  + 0.000s  (just elapsed)   41.734s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (0, 6), (0, 5))...
+*   time:  + 0.000s  (just elapsed)   48.797s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (1, 1), (0, 1))
+*   time:  +47.891s  (just elapsed)   89.625s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |[1]|   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (1, 1), (0, 1))...
+*   time:  + 0.000s  (just elapsed)   89.625s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (1, 1), (0, 1))...
+*   time:  + 0.000s  (just elapsed)   48.797s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (1, 6), (1, 5))
+*   time:  +46.719s  (just elapsed)   95.516s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (1, 6), (1, 5))...
+*   time:  + 0.000s  (just elapsed)   89.625s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (1, 6), (1, 5))...
+*   time:  + 0.000s  (just elapsed)   95.516s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (3, 0), (2, 0))
+*   time:  +44.484s  (just elapsed)  134.109s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (3, 0), (2, 0))...
+*   time:  + 0.000s  (just elapsed)  134.109s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (3, 0), (2, 0))...
+*   time:  + 0.000s  (just elapsed)   95.516s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (3, 7), (2, 7))
+*   time:  +44.375s  (just elapsed)  139.891s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (3, 7), (2, 7))...
+*   time:  + 0.000s  (just elapsed)  134.109s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (3, 7), (2, 7))...
+*   time:  + 0.000s  (just elapsed)  139.891s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (3, 1), (3, 2))
+*   time:  +39.484s  (just elapsed)  173.594s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (3, 1), (3, 2))...
+*   time:  + 0.000s  (just elapsed)  173.594s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (3, 1), (3, 2))...
+*   time:  + 0.000s  (just elapsed)  139.891s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (4, 7), (5, 7))
+*   time:  +46.172s  (just elapsed)  186.062s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (4, 7), (5, 7))...
+*   time:  + 0.000s  (just elapsed)  173.594s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (4, 7), (5, 7))...
+*   time:  + 0.000s  (just elapsed)  186.062s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (4, 0), (5, 0))
+*   time:  +35.812s  (just elapsed)  209.406s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |[1]|[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (4, 0), (5, 0))...
+*   time:  + 0.000s  (just elapsed)  209.406s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (4, 0), (5, 0))...
+*   time:  + 0.000s  (just elapsed)  186.062s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (3, 6), (2, 6))
+*   time:  +38.000s  (just elapsed)  224.062s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |[1]|   |[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (3, 6), (2, 6))...
+*   time:  + 0.000s  (just elapsed)  209.406s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (3, 6), (2, 6))...
+*   time:  + 0.000s  (just elapsed)  224.062s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (4, 1), (4, 2))
+*   time:  +38.078s  (just elapsed)  247.484s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |[1]|   |[1]|   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (4, 1), (4, 2))...
+*   time:  + 0.000s  (just elapsed)  247.484s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (4, 1), (4, 2))...
+*   time:  + 0.000s  (just elapsed)  224.062s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (4, 6), (5, 6))
+*   time:  +53.156s  (just elapsed)  277.219s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (4, 6), (5, 6))...
+*   time:  + 0.000s  (just elapsed)  247.484s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (4, 6), (5, 6))...
+*   time:  + 0.000s  (just elapsed)  277.219s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (6, 1), (6, 2))
+*   time:  +54.891s  (just elapsed)  302.375s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|(1)|   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (6, 1), (6, 2))...
+*   time:  + 0.000s  (just elapsed)  302.375s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (6, 1), (6, 2))...
+*   time:  + 0.000s  (just elapsed)  277.219s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (6, 6), (6, 5))
+*   time:  +49.000s  (just elapsed)  326.219s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |[1]|   |   |[1]|   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|(1)|   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |(1)|
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (6, 6), (6, 5))...
+*   time:  + 0.000s  (just elapsed)  302.375s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (6, 6), (6, 5))...
+*   time:  + 0.000s  (just elapsed)  326.219s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (7, 1), (7, 2))
+*   time:  +51.984s  (just elapsed)  354.359s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |[1]|   |   |[1]|   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (7, 1), (7, 2))...
+*   time:  + 0.000s  (just elapsed)  354.359s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (7, 1), (7, 2))...
+*   time:  + 0.000s  (just elapsed)  326.219s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (7, 6), (7, 5))
+*   time:  +50.891s  (just elapsed)  377.109s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |[1]|   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (7, 6), (7, 5))...
+*   time:  + 0.000s  (just elapsed)  354.359s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (7, 6), (7, 5))...
+*   time:  + 0.000s  (just elapsed)  377.109s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (0, 2), (0, 3))
+*   time:  +49.797s  (just elapsed)  404.156s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |[1]|   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|   |   |   |   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (0, 2), (0, 3))...
+*   time:  + 0.000s  (just elapsed)  404.156s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (0, 2), (0, 3))...
+*   time:  + 0.000s  (just elapsed)  377.109s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (2, 6), (2, 5))
+*   time:  +67.328s  (just elapsed)  444.438s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (2, 6), (2, 5))...
+*   time:  + 0.000s  (just elapsed)  404.156s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (2, 6), (2, 5))...
+*   time:  + 0.000s  (just elapsed)  444.438s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (0, 1), (0, 2))
+*   time:  +55.000s  (just elapsed)  459.156s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (0, 1), (0, 2))...
+*   time:  + 0.000s  (just elapsed)  459.156s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (0, 1), (0, 2))...
+*   time:  + 0.000s  (just elapsed)  444.438s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (5, 6), (6, 6))
+*   time:  +75.703s  (just elapsed)  520.141s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |   |(1)|(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (5, 6), (6, 6))...
+*   time:  + 0.000s  (just elapsed)  459.156s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (5, 6), (6, 6))...
+*   time:  + 0.000s  (just elapsed)  520.141s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (3, 2), (2, 2))
+*   time:  +56.828s  (just elapsed)  515.984s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (3, 2), (2, 2))...
+*   time:  + 0.000s  (just elapsed)  515.984s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (3, 2), (2, 2))...
+*   time:  + 0.000s  (just elapsed)  520.141s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (6, 5), (6, 4))
+*   time:  +86.734s  (just elapsed)  606.875s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |(1)|   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (6, 5), (6, 4))...
+*   time:  + 0.000s  (just elapsed)  515.984s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (6, 5), (6, 4))...
+*   time:  + 0.000s  (just elapsed)  606.875s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (4, 2), (4, 3))
+*   time:  +55.797s  (just elapsed)  571.781s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (4, 2), (4, 3))...
+*   time:  + 0.000s  (just elapsed)  571.781s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (4, 2), (4, 3))...
+*   time:  + 0.000s  (just elapsed)  606.875s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (7, 5), (7, 4))
+*   time:  +79.453s  (just elapsed)  686.328s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (7, 5), (7, 4))...
+*   time:  + 0.000s  (just elapsed)  571.781s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (7, 5), (7, 4))...
+*   time:  + 0.000s  (just elapsed)  686.328s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (6, 2), (6, 3))
+*   time:  +61.422s  (just elapsed)  633.203s  (game total)
+* displaying game info:
+*   tokens: white: 12, black: 12
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |(1)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (6, 2), (6, 3))...
+*   time:  + 0.000s  (just elapsed)  633.203s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (6, 2), (6, 3))...
+*   time:  + 0.000s  (just elapsed)  686.328s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('BOOM', (6, 4))
+*   time:  +72.281s  (just elapsed)  758.609s  (game total)
+* displaying game info:
+*   tokens: white: 10, black: 10
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('BOOM', (6, 4))...
+*   time:  + 0.000s  (just elapsed)  633.203s  (game total)
+* updating player 2 (black) with black's action ('BOOM', (6, 4))...
+*   time:  + 0.000s  (just elapsed)  758.609s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (0, 0), (0, 1))
+*   time:  +17.031s  (just elapsed)  650.234s  (game total)
+* displaying game info:
+*   tokens: white: 10, black: 10
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |   |(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (0, 0), (0, 1))...
+*   time:  + 0.000s  (just elapsed)  650.234s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (0, 0), (0, 1))...
+*   time:  + 0.000s  (just elapsed)  758.609s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (0, 7), (0, 6))
+*   time:  +14.766s  (just elapsed)  773.375s  (game total)
+* displaying game info:
+*   tokens: white: 10, black: 10
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |   |(1)|(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (0, 7), (0, 6))...
+*   time:  + 0.000s  (just elapsed)  650.234s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (0, 7), (0, 6))...
+*   time:  + 0.000s  (just elapsed)  773.375s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (1, 0), (0, 0))
+*   time:  +13.312s  (just elapsed)  663.547s  (game total)
+* displaying game info:
+*   tokens: white: 10, black: 10
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (1, 0), (0, 0))...
+*   time:  + 0.000s  (just elapsed)  663.547s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (1, 0), (0, 0))...
+*   time:  + 0.000s  (just elapsed)  773.375s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (1, 7), (0, 7))
+*   time:  +23.125s  (just elapsed)  796.500s  (game total)
+* displaying game info:
+*   tokens: white: 10, black: 10
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|   |[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |(1)|   |   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (1, 7), (0, 7))...
+*   time:  + 0.000s  (just elapsed)  663.547s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (1, 7), (0, 7))...
+*   time:  + 0.000s  (just elapsed)  796.500s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (2, 0), (3, 0))
+*   time:  +23.594s  (just elapsed)  687.141s  (game total)
+* displaying game info:
+*   tokens: white: 10, black: 10
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|   |[1]|   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (2, 0), (3, 0))...
+*   time:  + 0.000s  (just elapsed)  687.141s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (2, 0), (3, 0))...
+*   time:  + 0.000s  (just elapsed)  796.500s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (2, 7), (1, 7))
+*   time:  +30.047s  (just elapsed)  826.547s  (game total)
+* displaying game info:
+*   tokens: white: 10, black: 10
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (2, 7), (1, 7))...
+*   time:  + 0.000s  (just elapsed)  687.141s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (2, 7), (1, 7))...
+*   time:  + 0.000s  (just elapsed)  826.547s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (0, 3), (0, 4))
+*   time:  +18.203s  (just elapsed)  705.344s  (game total)
+* displaying game info:
+*   tokens: white: 10, black: 10
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|[1]|[1]|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (0, 3), (0, 4))...
+*   time:  + 0.000s  (just elapsed)  705.344s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (0, 3), (0, 4))...
+*   time:  + 0.000s  (just elapsed)  826.547s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (0, 6), (0, 5))
+*   time:  +43.531s  (just elapsed)  870.078s  (game total)
+* displaying game info:
+*   tokens: white: 10, black: 10
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[2]|[1]|[1]|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (0, 6), (0, 5))...
+*   time:  + 0.000s  (just elapsed)  705.344s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (0, 6), (0, 5))...
+*   time:  + 0.000s  (just elapsed)  870.078s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('BOOM', (0, 4))
+*   time:  +19.828s  (just elapsed)  725.172s  (game total)
+* displaying game info:
+*   tokens: white: 9, black: 6
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |   |[1]|[1]|[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('BOOM', (0, 4))...
+*   time:  + 0.000s  (just elapsed)  725.172s  (game total)
+* updating player 2 (black) with white's action ('BOOM', (0, 4))...
+*   time:  + 0.000s  (just elapsed)  870.078s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (6, 7), (7, 7))
+*   time:  +66.750s  (just elapsed)  936.828s  (game total)
+* displaying game info:
+*   tokens: white: 9, black: 6
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |   |[1]|   |[2]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|(1)|(1)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (6, 7), (7, 7))...
+*   time:  + 0.000s  (just elapsed)  725.172s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (6, 7), (7, 7))...
+*   time:  + 0.000s  (just elapsed)  936.828s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (6, 0), (7, 0))
+*   time:  +18.281s  (just elapsed)  743.453s  (game total)
+* displaying game info:
+*   tokens: white: 9, black: 6
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |   |[1]|   |[2]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|   |(2)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (6, 0), (7, 0))...
+*   time:  + 0.000s  (just elapsed)  743.453s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (6, 0), (7, 0))...
+*   time:  + 0.000s  (just elapsed)  936.828s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 2, (7, 7), (7, 5))
+*   time:  +94.625s  (just elapsed)  1031.453s  (game total)
+* displaying game info:
+*   tokens: white: 9, black: 6
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |[2]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|   |(2)|
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 2, (7, 7), (7, 5))...
+*   time:  + 0.000s  (just elapsed)  743.453s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 2, (7, 7), (7, 5))...
+*   time:  + 0.000s  (just elapsed)  1031.453s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 2, (7, 0), (7, 2))
+*   time:  +42.781s  (just elapsed)  786.234s  (game total)
+* displaying game info:
+*   tokens: white: 9, black: 6
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |[2]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |(2)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|   |   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 2, (7, 0), (7, 2))...
+*   time:  + 0.000s  (just elapsed)  786.234s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 2, (7, 0), (7, 2))...
+*   time:  + 0.000s  (just elapsed)  1031.453s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (7, 5), (7, 3))
+*   time:  +182.422s  (just elapsed)  1213.875s  (game total)
+* displaying game info:
+*   tokens: white: 9, black: 6
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |(2)|
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|   |   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (7, 5), (7, 3))...
+*   time:  + 0.000s  (just elapsed)  786.234s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (7, 5), (7, 3))...
+*   time:  + 0.000s  (just elapsed)  1213.875s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 2, (7, 2), (7, 4))
+*   time:  +355.828s  (just elapsed)  1142.062s  (game total)
+* displaying game info:
+*   tokens: white: 9, black: 6
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |(2)|
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|   |   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 2, (7, 2), (7, 4))...
+*   time:  + 0.000s  (just elapsed)  1142.062s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 2, (7, 2), (7, 4))...
+*   time:  + 0.000s  (just elapsed)  1213.875s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (5, 7), (4, 7))
+*   time:  +63.984s  (just elapsed)  1277.859s  (game total)
+* displaying game info:
+*   tokens: white: 9, black: 6
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |[1]|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |(2)|
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|   |   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (5, 7), (4, 7))...
+*   time:  + 0.000s  (just elapsed)  1142.062s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (5, 7), (4, 7))...
+*   time:  + 0.000s  (just elapsed)  1277.859s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('BOOM', (7, 4))
+*   time:  +18.359s  (just elapsed)  1160.422s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |[1]|[1]|   |   |[1]|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|   |   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('BOOM', (7, 4))...
+*   time:  + 0.000s  (just elapsed)  1160.422s  (game total)
+* updating player 2 (black) with white's action ('BOOM', (7, 4))...
+*   time:  + 0.000s  (just elapsed)  1277.859s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (0, 7), (0, 6))
+*   time:  +23.078s  (just elapsed)  1300.938s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |[1]|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |(1)|   |   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (0, 7), (0, 6))...
+*   time:  + 0.000s  (just elapsed)  1160.422s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (0, 7), (0, 6))...
+*   time:  + 0.000s  (just elapsed)  1300.938s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (5, 0), (6, 0))
+*   time:  +55.672s  (just elapsed)  1216.094s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |[1]|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (5, 0), (6, 0))...
+*   time:  + 0.000s  (just elapsed)  1216.094s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (5, 0), (6, 0))...
+*   time:  + 0.000s  (just elapsed)  1300.938s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (4, 7), (5, 7))
+*   time:  +27.516s  (just elapsed)  1328.453s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |(1)|   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (4, 7), (5, 7))...
+*   time:  + 0.000s  (just elapsed)  1216.094s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (4, 7), (5, 7))...
+*   time:  + 0.000s  (just elapsed)  1328.453s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (0, 2), (0, 3))
+*   time:  +75.562s  (just elapsed)  1291.656s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (0, 2), (0, 3))...
+*   time:  + 0.000s  (just elapsed)  1291.656s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (0, 2), (0, 3))...
+*   time:  + 0.000s  (just elapsed)  1328.453s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (0, 6), (0, 5))
+*   time:  +39.766s  (just elapsed)  1368.219s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |(1)|   |   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (0, 6), (0, 5))...
+*   time:  + 0.000s  (just elapsed)  1291.656s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (0, 6), (0, 5))...
+*   time:  + 0.000s  (just elapsed)  1368.219s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (0, 3), (1, 3))
+*   time:  +1003.641s  (just elapsed)  2295.297s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |   |[1]|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |(1)|   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (0, 3), (1, 3))...
+*   time:  + 0.000s  (just elapsed)  2295.297s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (0, 3), (1, 3))...
+*   time:  + 0.000s  (just elapsed)  1368.219s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (5, 7), (6, 7))
+*   time:  +71.641s  (just elapsed)  1439.859s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |(1)|   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |(1)|   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (5, 7), (6, 7))...
+*   time:  + 0.000s  (just elapsed)  2295.297s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (5, 7), (6, 7))...
+*   time:  + 0.000s  (just elapsed)  1439.859s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (2, 2), (3, 2))
+*   time:  +136.812s  (just elapsed)  2432.109s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |(1)|   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |   |(1)|   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (2, 2), (3, 2))...
+*   time:  + 0.000s  (just elapsed)  2432.109s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (2, 2), (3, 2))...
+*   time:  + 0.000s  (just elapsed)  1439.859s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (0, 5), (0, 4))
+*   time:  +52.359s  (just elapsed)  1492.219s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |(1)|   |   |(1)|   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |   |(1)|   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (0, 5), (0, 4))...
+*   time:  + 0.000s  (just elapsed)  2432.109s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (0, 5), (0, 4))...
+*   time:  + 0.000s  (just elapsed)  1492.219s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (4, 3), (5, 3))
+*   time:  +536.781s  (just elapsed)  2968.891s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |   |   |[1]|   |
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |(1)|   |   |   |(1)|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |   |(1)|   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (4, 3), (5, 3))...
+*   time:  + 0.000s  (just elapsed)  2968.891s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (4, 3), (5, 3))...
+*   time:  + 0.000s  (just elapsed)  1492.219s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (6, 7), (7, 7))
+*   time:  +39.562s  (just elapsed)  1531.781s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |   |   |   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |(1)|   |   |   |(1)|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |   |(1)|   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (6, 7), (7, 7))...
+*   time:  + 0.000s  (just elapsed)  2968.891s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (6, 7), (7, 7))...
+*   time:  + 0.000s  (just elapsed)  1531.781s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+*   player 1 (white) returned action: ('MOVE', 1, (1, 3), (2, 3))
+*   time:  +95.422s  (just elapsed)  3064.312s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |   |   |   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |[1]|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |   |   |(1)|   |   |(1)|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |   |(1)|   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with white's action ('MOVE', 1, (1, 3), (2, 3))...
+*   time:  + 0.000s  (just elapsed)  3064.312s  (game total)
+* updating player 2 (black) with white's action ('MOVE', 1, (1, 3), (2, 3))...
+*   time:  + 0.000s  (just elapsed)  1531.781s  (game total)
+** player 2 (black)'s turn
+* asking player 2 (black) for next action...
+*   player 2 (black) returned action: ('MOVE', 1, (0, 4), (0, 3))
+*   time:  +59.938s  (just elapsed)  1591.719s  (game total)
+* displaying game info:
+*   tokens: white: 7, black: 3
+*      +---+---+---+---+---+---+---+---+
+*    7 |   |[1]|   |   |   |   |   |[1]|
+*      +---+---+---+---+---+---+---+---+
+*    6 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    5 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    4 |   |   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    3 |[1]|   |(1)|   |   |(1)|   |   |
+*      +---+---+---+---+---+---+---+---+
+*    2 |   |   |   |(1)|   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    1 |(1)|   |   |   |   |   |   |   |
+*      +---+---+---+---+---+---+---+---+
+*    0 |(1)|   |   |(1)|   |   |(1)|   |
+*      +---+---+---+---+---+---+---+---+
+*   y/x  0   1   2   3   4   5   6   7
+* updating player 1 (white) with black's action ('MOVE', 1, (0, 4), (0, 3))...
+*   time:  + 0.000s  (just elapsed)  3064.312s  (game total)
+* updating player 2 (black) with black's action ('MOVE', 1, (0, 4), (0, 3))...
+*   time:  + 0.000s  (just elapsed)  1591.719s  (game total)
+** player 1 (white)'s turn
+* asking player 1 (white) for next action...
+
+* bye!
+PS C:\Users\samer\Desktop\python\partB>      
