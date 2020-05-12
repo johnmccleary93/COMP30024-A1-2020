@@ -6,15 +6,21 @@ import pdb
 import copy
 import time
 
+BOARD_SQUARES = {(x,y) for x in range(8) for y in range(8)}
+
+BOOM_RADIUS = [(-1,+1), (+0,+1), (+1,+1),
+               (-1,+0),          (+1,+0),
+               (-1,-1), (+0,-1), (+1,-1)]
+
 class Game:
 
     def __init__(self, tokens, moves_taken=[]):
         self.tokens = tokens
         self.moves_taken = moves_taken
         self.current_score = self.board_score()
-
-        
-    
+        self.black_clusters = self.explosion_groups("black")
+        self.white_clusters = self.explosion_groups("white")
+   
     def return_token(self, coords):
         for token in self.tokens:
             if token.coords == coords:
@@ -38,6 +44,45 @@ class Game:
         else:
             return 0
 
+    def around_square(self, xy):
+        """
+        Generate the list of squares surrounding a square
+        (those affected by a boom action).
+        """
+        x, y = xy
+        for dx, dy in BOOM_RADIUS:
+            square = x+dx, y+dy
+            if square in BOARD_SQUARES:
+                yield square
+    
+    def explosion_groups(self, color):
+        targets = {token.coords for token in self.tokens if token.color == color}
+        up = {t: t for t in targets}
+        # find performs a root lookup with path compression in 'up'
+        def find(t):
+            if up[t] == t:
+                return t
+            top = find(up[t])
+            up[t] = top
+            return top
+        # run disjoint set formation algorithm to identify groups
+        for t in targets:
+            ttop = find(t)
+            for u in self.around_square(t):
+                if u in targets:
+                    utop = find(u)
+                    if ttop != utop:
+                        up[utop] = ttop
+        # convert disjoint set trees into Python sets
+        groups = {}
+        for t in targets:
+            top = find(t)
+            if top in groups:
+                groups[top].add(t)
+            else:
+                groups[top] = {t}
+        # return the partition
+        return len({frozenset(group) for group in groups.values()})
 
     #Assumes board size is 7. Find all moves for a given token.
     def find_moves(self, token, mode="neutral"):
@@ -109,6 +154,7 @@ class Game:
             if token.color != player:
                 score -= 2
             score = score + len(self.find_all_moves(mode="neutral").values()) - len(self.find_all_moves('black', mode="neutral").values())
+        score += (self.explosion_groups("player") / 2)
         return score
         
     def token_dists(self, token, color):
@@ -144,7 +190,7 @@ class Game:
         else:
             return False
 
-    def alpha_beta(self, moves, maximizingPlayer, player_color, mode, depth=3, alpha=-100000, beta=100000): #Add depth and new value updates
+    def alpha_beta(self, moves, maximizingPlayer, player_color, mode, depth=2, alpha=-100000, beta=100000): #Add depth and new value updates
         best_move = ()
         best_moves = self.moves_taken
         if depth == 0 or moves == {}:
