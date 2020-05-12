@@ -82,7 +82,7 @@ class Game:
             else:
                 groups[top] = {t}
         # return the partition
-        return len({frozenset(group) for group in groups.values()})
+        return list({frozenset(group) for group in groups.values()})
 
     #Assumes board size is 7. Find all moves for a given token.
     def find_moves(self, token, mode="neutral"):
@@ -154,7 +154,7 @@ class Game:
             if token.color != player:
                 score -= 2
             score = score + len(self.find_all_moves(mode="neutral").values()) - len(self.find_all_moves('black', mode="neutral").values())
-        score += (self.explosion_groups("player") / 2)
+        score += (len(self.explosion_groups("player")) / 2)
         return score
         
     def token_dists(self, token, color):
@@ -226,7 +226,55 @@ class Game:
                     if alpha >= beta:
                         return (value, best_move, best_moves)
             return (value, best_move, best_moves)
-            
+
+    def greedy(self, color):
+        best_score = 10000
+        best_coords = ()
+        x = 0
+        y = 0
+        boom_found = False
+        while y <= 7 and not boom_found:
+            while x <= 7 and not boom_found:
+                if self.return_token((x,y)) is None:
+                    new_board = Game(copy.deepcopy(self.tokens), self.moves_taken)
+                    new_board.tokens += [Token(color, (x,y), 1)]
+                    new_board.apply_action(new_board.return_token((x,y)), ((x,y),1))
+                    new_score = len([token for token in new_board.tokens if token.color != color])
+                    if new_score < best_score:
+                        best_score = new_score
+                        best_coords = (x,y)
+                elif self.return_token((x,y)).color == color:
+                    new_board = Game(copy.deepcopy(self.tokens), self.moves_taken)
+                    new_board.apply_action(new_board.return_token((x,y)), ((x,y),1))
+                    new_score = len([token for token in new_board.tokens if token.color != color])
+                    white_diff = len([token for token in self.tokens if token.color == color]) - len([token for token in new_board.tokens if token.color == color]) 
+                    black_diff = len([token for token in self.tokens if token.color != color]) - len([token for token in new_board.tokens if token.color != color])
+                    if black_diff > white_diff:
+                        best_score = new_score
+                        best_coords = (x,y)
+                        boom_found = True            
+                    elif new_score <= best_score:
+                        best_score = new_score
+                        best_coords = (x,y)
+                x += 1
+            y += 1
+            x = 0
+        #closest_token = self.return_token(best_coords)
+        valid_moves = self.find_all_moves(color)
+        closest_move = ()
+        closest_distance = 10000
+        for token in valid_moves.keys():
+            for move in valid_moves[token]:
+                distance = abs(move[0][0] - best_coords[0]) + abs(move[0][1] - best_coords[1])
+                if distance < closest_distance:
+                    closest_distance = distance
+                    closest_move = move 
+                    closest_token = token
+        print(closest_token, closest_move)
+        return (closest_token, closest_move)
+
+
+
 
     def apply_action(self, token, action):
         if token.coords == action[0]:
